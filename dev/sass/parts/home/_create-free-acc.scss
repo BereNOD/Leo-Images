@@ -1,0 +1,29 @@
+.create-free-acc {
+	border-top: solid #d5e4e8 1px;
+	border-bottom: solid #e3e3e3 1px;
+	&__inner {
+		height: 114px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__title {
+		font-size: 2.467rem;
+		font-weight: 300;
+		color: $TAC_grey;
+	}
+	&__link {
+		$h: 62px;
+		display: block;
+		font-size: 2.467rem;
+		color: $TAC_white;
+		width: 256px;
+		height: $h;
+		line-height: $h;
+		text-align: center;
+		text-decoration: none;
+		margin-left: 35px;
+		transition: background-color $transition;
+		@include bgc-states-hsla(192, 52%, 71%, 1)
+	}
+}

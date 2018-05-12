@@ -1,0 +1,17 @@
+include ../../modules/slide.jade
+
+section.slider
+	h2(hidden) Slider
+	.container.slider__inner#section-slider-items
+		+slide({
+			'message': 'Photos, illustrations by creatives all over the world.',
+			'search': {
+				'id': 'people',
+				'placeholder': 'People walking'
+		}})
+		+slide({
+			'message': 'Landscapes from all over the world.',
+			'search': {
+				'id': 'people',
+				'placeholder': 'Landscapes'
+		}})

@@ -1,0 +1,34 @@
+.slider {
+	background: url(../img/slider-bg.jpg);
+	background-size: cover;
+	&__inner {
+		height: 483px;
+		display: flex;
+		align-items: center;
+	}
+}
+
+#section-slider-items {
+	position: relative;
+	.slick {
+		&-arrow {
+			position: absolute;
+			top: 50%;
+			font-size: 0;
+			margin: 0;
+			padding: 0;
+			border: 0;
+			background-color: transparent;
+			width: 31px;
+			height: 64px;
+			background-image: url(../img/slider-arrow.svg);
+			&.slick-prev {
+				right: calc(100% + 75px);
+				transform: rotate(180deg);
+			}
+			&.slick-next {
+				left: calc(100% + 75px);
+			}
+		}
+	}
+}

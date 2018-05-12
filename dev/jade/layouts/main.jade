@@ -1,0 +1,54 @@
+doctype html
+html(lang='ru', class="no-js")
+
+	head
+		meta(charset='utf-8')
+
+		block title
+		meta(name='description', content='')
+
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+
+		link(rel="apple-touch-icon", sizes="180x180", href="assets/img/favicon/apple-touch-icon.png")
+		link(rel="icon", type="image/png", sizes="32x32", href="assets/img/favicon/favicon-32x32.png")
+		link(rel="icon", type="image/png", sizes="16x16", href="assets/img/favicon/favicon-16x16.png")
+		link(rel="manifest", href="assets/img/favicon/site.webmanifest")
+		link(rel="mask-icon", href="assets/img/favicon/safari-pinned-tab.svg", color="#5bbad5")
+		link(rel="shortcut icon", href="assets/img/favicon/favicon.ico")
+		meta(name="msapplication-TileColor", content="#4b2381")
+		meta(name="msapplication-config", content="assets/img/favicon/browserconfig.xml")
+		meta(name="theme-color", content="#ffffff")
+
+		script !function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);
+
+		link(rel='stylesheet', href='assets/css/fonts.css')
+		script loadCSS( "assets/vendor/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css?ver=1.0.0", false, "all" );
+		script loadCSS( "assets/css/header.css?ver=1.0.0", false, "all" );
+		script loadCSS( "assets/css/common.css?ver=1.0.0", false, "all" );
+
+		noscript
+			link(rel="stylesheet", href="assets/vendor/font-awesome/web-fonts-with-css/css/fontawesome-all.min.css")
+			link(rel='stylesheet', href='assets/css/header.css')
+			link(rel='stylesheet', href='assets/css/common.css')
+
+		<!--[if lt IE 9]>
+		<script src="assets/vendor/es5-shim/es5-shim.min.js"></script>
+		<script src="assets/vendor/html5shiv/dist/html5shiv.min.js"></script>
+		<script src="assets/vendor/html5shiv/dist/html5shiv-printshiv.min.js"></script>
+		<script src="assets/vendor/respond/dest/respond.min.js"></script>
+		<![endif]-->
+
+	body
+		h1(hidden) Leo Images
+
+		include ../parts/header.jade
+
+		block content
+
+		include ../parts/footer.jade
+
+		script(src="assets/js/libs.min.js")
+		script(src="assets/js/common.js")
+
+		block page-script

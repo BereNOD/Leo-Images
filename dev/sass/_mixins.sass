@@ -1,0 +1,75 @@
+@mixin placeholder-color($color: #D6D6D6)
+	&::-webkit-input-placeholder
+		color: $color
+	&:-moz-placeholder
+		color: $color
+	&::-moz-placeholder
+		color: $color
+	&:-ms-input-placeholder
+		color: $color
+
+@mixin placeholder-font-size($size: 14px)
+	&::-webkit-input-placeholder
+		font-size: $size
+	&:-moz-placeholder
+		font-size: $size
+	&::-moz-placeholder
+		font-size: $size
+	&:-ms-input-placeholder
+		font-size: $size
+
+@mixin placeholder-font-family($family: $Roboto)
+	&::-webkit-input-placeholder
+		font-family: $family
+	&:-moz-placeholder
+		font-family: $family
+	&::-moz-placeholder
+		font-family: $family
+	&:-ms-input-placeholder
+		font-family: $family
+
+@mixin placeholder-font-weight($weight: 400)
+	&::-webkit-input-placeholder
+		font-weight: $weight
+	&:-moz-placeholder
+		font-weight: $weight
+	&::-moz-placeholder
+		font-weight: $weight
+	&:-ms-input-placeholder
+		font-weight: $weight
+
+@mixin placeholder-font-style($style: normal)
+	&::-webkit-input-placeholder
+		font-style: $style
+	&:-moz-placeholder
+		font-style: $style
+	&::-moz-placeholder
+		font-style: $style
+	&:-ms-input-placeholder
+		font-style: $style
+
+@mixin placeholder-line-height($height: 1)
+	&::-webkit-input-placeholder
+		line-height: $height
+	&:-moz-placeholder
+		line-height: $height
+	&::-moz-placeholder
+		line-height: $height
+	&:-ms-input-placeholder
+		line-height: $height
+
+@mixin placeholder($color: #D6D6D6, $size: 14px, $family: $Roboto, $weight: 400, $style: normal, $height: 1)
+	+placeholder-color($color)
+	+placeholder-font-size($size)
+	+placeholder-font-family($family)
+	+placeholder-font-weight($weight)
+	+placeholder-font-style($style)
+	+placeholder-line-height($height)
+
+@mixin bgc-states-hsla($h, $s, $l, $a)
+	background-color: hsla($h, $s, $l, $a);
+	&:hover,
+	&:focus
+		background-color: hsla($h, $s, $l / 2, $a);
+	&:active
+		background-color: hsla($h, $s, $l / 3, $a);

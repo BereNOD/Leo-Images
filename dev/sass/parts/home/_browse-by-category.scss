@@ -1,0 +1,28 @@
+.browse-by-category {
+	padding-top: 36px;
+	padding-bottom: 67px;
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	&__title {
+		width: 100%;
+		text-align: center;
+		font-size: 1.53rem;
+		color: $TAC_dark_grey;
+		font-weight: 300;
+		margin-bottom: 30px;
+		text-transform: uppercase;
+	}
+	&__group {
+		display: flex;
+		flex-direction: column;
+	}
+	&__link {
+		color: $TAC_light_grey;
+		text-decoration: none;
+		font-size: 1rem;
+		line-height: 22px;
+	}
+}

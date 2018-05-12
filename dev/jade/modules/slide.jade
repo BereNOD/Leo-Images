@@ -1,0 +1,6 @@
+mixin slide(obj)
+	.slide
+		p.slide__message= obj.message
+		form.slide-search
+			input.slide-search__field(id=obj.search.id, name=obj.search.id, placeholder=obj.search.placeholder)
+			button.slide-search__submit
